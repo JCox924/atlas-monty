@@ -28,7 +28,7 @@ void executer(char **argv)
 	while ((line_size = getline(&buf, &len, fp)) != EOF)
 	{
 		token = strtok(buf, "\n\t\r ");
-		if (token == '\0')
+		if (*token == '\0')
 		{
 			continue;
 		}
