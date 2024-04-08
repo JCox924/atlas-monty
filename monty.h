@@ -36,5 +36,6 @@ typedef struct instruction_s
 } instruction_t;
 
 void pushit(stack_t **top, unsigned int line_number);
+void malloc_error(void);
 
 #endif
