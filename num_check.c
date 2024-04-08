@@ -20,3 +20,4 @@ int num_check(char *token)
 			return (-1);
 	}
 	return (1);
+}
