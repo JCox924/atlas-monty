@@ -10,9 +10,10 @@
  */
 void (*op_map(char *token, unsigned int line)) (stack_t **, unsigned int)
 {
-	int i;
+	int i = 0;
 	instruction_t operation[] = {
 		{"push", pushit},
+		{"pall", print_all},
 		{NULL, NULL}
 	};
 	for (; operation[i].opcode != NULL; i++)
@@ -22,5 +23,6 @@ void (*op_map(char *token, unsigned int line)) (stack_t **, unsigned int)
 			return (operation[i].f);
 		}
 	}
+	invalid_op(token, line);
 	return (NULL);
 }

@@ -36,6 +36,16 @@ typedef struct instruction_s
 } instruction_t;
 
 void pushit(stack_t **top, unsigned int line_number);
+void print_all(stack_t **top, unsigned int line_number);
+int is_comment(char *token, int line_counter);
+void (*op_map(char *token, unsigned int line)) (stack_t **, unsigned int);
+void nonint_error(unsigned int line);
+void invalid_op(char *invInstruction, unsigned int line);
+void free_stack(stack_t *top);
+void arg_error(void);
+void open_error(char **);
+int num_check(char *token);
 void malloc_error(void);
+void executer(char **argv);
 
 #endif
